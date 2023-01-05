@@ -14,6 +14,11 @@ const Sequelize = require('sequelize')
         dialect: 'mysql'
     })
 
+// Rotas
+    app.get('/cad', function(req, res) {
+        
+    })
+
 
 
 app.listen(8081, function(){
