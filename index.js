@@ -16,7 +16,7 @@ const Sequelize = require('sequelize')
 
 // Rotas
     app.get('/cad', function(req, res) {
-        
+        res.send('ROTA DE CADASTRO DE POST')
     })
 
 
