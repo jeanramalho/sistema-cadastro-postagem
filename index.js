@@ -25,6 +25,7 @@ app.use(bodyParser.json())
     })
 
     app.post('/add', function(req, res) {
+        req.body.conteudo
         res.send('Formulário Enviado!')
     })
 
