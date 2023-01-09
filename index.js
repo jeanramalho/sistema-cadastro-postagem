@@ -15,6 +15,10 @@ const bodyParser = require('body-parser')
         dialect: 'mysql'
     })
 
+//Body Parser
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json())
+
 // Rotas
     app.get('/cad', function(req, res) {
         res.render('formulario')
