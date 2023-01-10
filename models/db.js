@@ -5,3 +5,8 @@ const Sequelize = require('sequelize')
     host: 'localhost',
     dialect: 'mysql'
 })
+
+module.exports = {
+    Sequelize: Sequelize,
+    sequelize: sequelize
+}
