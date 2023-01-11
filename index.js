@@ -19,6 +19,10 @@ app.use(bodyParser.json())
         res.render('formulario')
     })
 
+    app.get('/', function(req, res){
+        res.send('home')
+    })
+
     app.post('/add', function(req, res) {
         
         Post.create({
