@@ -21,7 +21,10 @@ app.use(bodyParser.json())
 
     app.post('/add', function(req, res) {
         
-
+        Post.create({
+            titulo: req.body.titulo,
+            conteudo: req.body.conteudo
+        })
 
         
     })
