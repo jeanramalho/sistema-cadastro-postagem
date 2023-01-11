@@ -24,6 +24,10 @@ app.use(bodyParser.json())
         Post.create({
             titulo: req.body.titulo,
             conteudo: req.body.conteudo
+        }).then(function(){
+            res.send("Post Criado com Sucesso!")
+        }).catch(function(erro){
+            res.send(`Houve um erro: ${erro}`)
         })
 
         
