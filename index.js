@@ -29,7 +29,7 @@ app.use(bodyParser.json())
             titulo: req.body.titulo,
             conteudo: req.body.conteudo
         }).then(function(){
-            res.send("Post Criado com Sucesso!")
+            res.redirect('/')
         }).catch(function(erro){
             res.send(`Houve um erro: ${erro}`)
         })
