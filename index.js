@@ -20,7 +20,9 @@ app.use(bodyParser.json())
     })
 
     app.get('/', function(req, res){
-        res.send('home')
+        Post.all().then(function(posts){
+            res.render('home',{posts: posts})
+        })
     })
 
     app.post('/add', function(req, res) {
