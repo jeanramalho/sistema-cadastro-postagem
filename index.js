@@ -20,7 +20,7 @@ app.use(bodyParser.json())
     })
 
     app.get('/', function(req, res){
-        Post.all().then(function(posts){
+        Post.all({order: [['id', 'DESC']]}).then(function(posts){
             res.render('home',{posts: posts})
         })
     })
