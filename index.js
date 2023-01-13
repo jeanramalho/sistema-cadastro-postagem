@@ -34,9 +34,11 @@ app.use(bodyParser.json())
             res.redirect('/')
         }).catch(function(erro){
             res.send(`Houve um erro: ${erro}`)
-        })
+        })       
+    })
 
-        
+    app.get('deletar/:id', function(req, res){
+        Post.destroy()
     })
 
 
