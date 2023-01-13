@@ -38,7 +38,7 @@ app.use(bodyParser.json())
     })
 
     app.get('deletar/:id', function(req, res){
-        Post.destroy()
+        Post.destroy({where: {'id': req.params.id}})
     })
 
 
